@@ -1,0 +1,284 @@
+HTML
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatika Fase E - Kelas X</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tab-active {
+            border-bottom-color: #3b82f6;
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                    <i class="fas fa-laptop-code text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight text-gray-900">Portal Informatika</h1>
+                    <p class="text-xs text-gray-500">Fase E • Kelas X SMA</p>
+                </div>
+            </div>
+            <div class="text-sm font-semibold bg-blue-50 text-blue-700 px-3 py-1 rounded-full border border-blue-200">
+                Total: 93 JP
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="bg-blue-500/30 text-blue-100 text-xs uppercase tracking-wider font-semibold px-3 py-1 rounded-full">Kurikulum Merdeka</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">Program Tahunan Pembelajaran</h2>
+            <p class="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">
+                Eksplorasi materi dasar teknologi informasi, pemrograman komputer, hingga analisis data untuk membentuk kemampuan berpikir komputasional.
+            </p>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <div class="flex border-b border-gray-200 mb-8 justify-center">
+            <button onclick="filterSemester('all')" id="btn-all" class="tab-btn px-6 py-3 font-medium text-sm transition-all border-b-2 border-transparent text-gray-500 hover:text-gray-700 tab-active">
+                Semua Materi
+            </button>
+            <button onclick="filterSemester('1')" id="btn-sem1" class="tab-btn px-6 py-3 font-medium text-sm transition-all border-b-2 border-transparent text-gray-500 hover:text-gray-700">
+                Semester 1 (Ganjil)
+            </button>
+            <button onclick="filterSemester('2')" id="btn-sem2" class="tab-btn px-6 py-3 font-medium text-sm transition-all border-b-2 border-transparent text-gray-500 hover:text-gray-700">
+                Semester 2 (Genap)
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="1">
+                <div class="bg-amber-50 border-b border-amber-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-amber-700 bg-amber-100/60 px-2 py-0.5 rounded">Bab 1</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>3 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Informatika & Kemampuan Umum</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Bekerja dalam Kelompok</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Membuat perencanaan kerja kelompok serta mengomunikasikan hasil kerja melalui presentasi dan visualisasi dengan baik.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="1">
+                <div class="bg-blue-50 border-b border-blue-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-100/60 px-2 py-0.5 rounded">Bab 2</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>8 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Berpikir Komputasional</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Pencarian (Searching)</li>
+                            <li>Pengurutan (Sorting)</li>
+                            <li>Penggunaan Stack & Queue</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Memahami strategi algoritmik pencarian/pengurutan efisien serta menerapkan konsep antrean & tumpukan dalam kehidupan sehari-hari.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="1">
+                <div class="bg-purple-50 border-b border-purple-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-purple-700 bg-purple-100/60 px-2 py-0.5 rounded">Bab 3</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>6 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Teknologi Informasi & Komunikasi</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Integrasi Aplikasi Perkantoran</li>
+                            <li>Fitur Lanjut Aplikasi Perkantoran</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Melakukan integrasi antardokumen (kata, angka, presentasi) serta memanfaatkan fitur tingkat lanjut aplikasi perkantoran.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="1">
+                <div class="bg-emerald-50 border-b border-emerald-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2 py-0.5 rounded">Bab 4</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>6 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Sistem Komputer</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Komponen Penyusun & Kolaborasi</li>
+                            <li>Sistem Operasi</li>
+                            <li>Cara Komputer Bekerja</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Menjelaskan interaksi perangkat keras, OS, dan pengguna (GUI/Audio), fungsi sistem operasi, serta mekanisme kerja pemroses data.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="1">
+                <div class="bg-red-50 border-b border-red-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-red-700 bg-red-100/60 px-2 py-0.5 rounded">Bab 5</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>3 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Jaringan Komputer & Internet</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Jaringan Lokal dan Internet</li>
+                            <li>Komunikasi Data via HP</li>
+                            <li>Proteksi Data Saat Berinternet</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Membedakan jaringan lokal/internet, memahami komunikasi seluler, serta menerapkan enkripsi untuk keamanan privasi data personal.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="2">
+                <div class="bg-cyan-50 border-b border-cyan-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-cyan-700 bg-cyan-100/60 px-2 py-0.5 rounded">Bab 6</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>10 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Analisis Data</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Mengenal Google Colab & Python</li>
+                            <li>Proyek Web Scraping</li>
+                            <li>Proyek Visualisasi Data</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Mengolah data secara online, melakukan pengumpulan data otomatis (scraping), visualisasi informasi, dan memahami aspek privasi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="2">
+                <div class="bg-teal-50 border-b border-teal-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-2 py-0.5 rounded">Bab 7</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>29 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Algoritma & Pemrograman</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Algoritma Dasar & Lingkungan IDE</li>
+                            <li>Variabel, Ekspresi, Struktur Kontrol</li>
+                            <li>Fungsi & Latihan Prosedural</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Membaca, menulis, dan mengeksekusi struktur kontrol (keputusan, perulangan) serta fungsi untuk memecahkan problem kompleks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="2">
+                <div class="bg-rose-50 border-b border-rose-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-rose-700 bg-rose-100/60 px-2 py-0.5 rounded">Bab 8</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>10 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Dampak Sosial Informatika</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Sejarah & Aspek Hukum/Ekonomi</li>
+                            <li>Rancangan Gagasan Informatika</li>
+                            <li>Karier, Studi Lanjut & Sertifikasi</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Memahami perkembangan IT, implikasi hukum produk digital, studi lanjut, sertifikasi, serta merancang gagasan masa depan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 overflow-hidden flex flex-col sm-card" data-semester="2">
+                <div class="bg-orange-50 border-b border-orange-100 p-4 flex justify-between items-center">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-orange-700 bg-orange-100/60 px-2 py-0.5 rounded">Bab 9</span>
+                    <span class="text-xs font-medium text-gray-500"><i class="far fa-clock mr-1"></i>21 JP</span>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-3">Praktika Lintas Bidang</h3>
+                        <p class="text-sm text-gray-600 font-medium mb-1">Materi Pokok:</p>
+                        <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside mb-4">
+                            <li>Pelaksanaan Proyek Komputasi</li>
+                            <li>Pemantauan & Evaluasi Proyek</li>
+                            <li>Komunikasi Solusi TIK</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <p class="text-xs text-gray-500 font-semibold mb-1"><i class="fas fa-bullseye mr-1"></i> Capaian Tujuan:</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Membangun budaya kerja tim inklusif, merancang/menguji artefak komputasi lintas pelajaran, serta mempresentasikan solusi logis.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16 py-6 text-center text-sm text-gray-500">
+        <p>© 2026 Kurikulum Merdeka • Informatika Fase E Kelas X [cite: 2, 6]</p>
+    </footer>
+
+    <script>
+        function filterSemester(sem) {
+            // Update Tab Activation Style
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active'));
+            if (sem === 'all') document.getElementById('btn-all').classList.add('tab-active');
+            if (sem === '1') document.getElementById('btn-sem1').classList.add('tab-active');
+            if (sem === '2') document.getElementById('btn-sem2').classList.add('tab-active');
+
+            // Filter Cards
+            document.querySelectorAll('.sm-card').forEach(card => {
+                if (sem === 'all' || card.getAttribute('data-semester') === sem) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
